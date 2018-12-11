@@ -8,9 +8,16 @@
         
     </head>
     <body>
+
+        <form method='POST' action='/names'>
+            <input type="text" name="name"></input>
+            <button type="submit">Submit</button>
+        </form>
+
+
         <h1>My Tasks</h1>
 
-        <?php foreach ($taks as $task) : ?>
+        <?php foreach ($tasks as $task) : ?>
         	<li>
         		<?php if ($task->completed) : ?>
         			<strike><?= $task->description; ?></strike>
